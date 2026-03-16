@@ -1,148 +1,53 @@
-name: Microsoft Azure APIs
-description: A collection of Microsoft Azure cloud service APIs
-image: https://azure.microsoft.com/svghandler/azure-logo.svg
-url: https://azure.microsoft.com
-created: '2024'
-modified: '2024'
-specificationVersion: '0.18'
+aid: azure-cloud
+name: Microsoft Azure Cloud APIs
+description: >-
+  A collection of Microsoft Azure cloud service APIs providing cloud computing
+  services including compute, storage, databases, AI, and networking across
+  IaaS, PaaS, and SaaS delivery models.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-- Cloud Computing
-- Infrastructure
-- Platform as a Service
-- IaaS
-- PaaS
-- SaaS
+  - Cloud Computing
+  - Infrastructure
+  - Platform as a Service
+  - IaaS
+  - PaaS
+  - SaaS
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/azure-cloud/refs/heads/main/apis.yml
+created: '2024-01-01'
+modified: '2026-03-16'
+specificationVersion: '0.19'
 apis:
-- name: Azure Compute API
-  description: Virtual machines, containers, and serverless computing services
-  image: https://azure.microsoft.com/svghandler/virtual-machines.svg
-  humanURL: https://azure.microsoft.com/en-us/services/virtual-machines/
-  baseURL: https://management.azure.com
-  tags:
-  - Compute
-  - Virtual Machines
-  - Containers
-  properties:
-  - type: Documentation
-    url: https://docs.microsoft.com/en-us/rest/api/compute/
-  - type: OpenAPI
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/compute/resource-manager/Microsoft.Compute/stable/2023-03-01/compute.json
-  - type: Authentication
-    url: https://docs.microsoft.com/en-us/azure/active-directory/develop/authentication-scenarios
-- name: Azure Storage API
-  description: Scalable cloud storage for data objects, files, and disks
-  image: https://azure.microsoft.com/svghandler/storage.svg
-  humanURL: https://azure.microsoft.com/en-us/services/storage/
-  baseURL: https://management.azure.com
-  tags:
-  - Storage
-  - Blob Storage
-  - Object Storage
-  properties:
-  - type: Documentation
-    url: https://docs.microsoft.com/en-us/rest/api/storageservices/
-  - type: OpenAPI
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/storage/resource-manager/Microsoft.Storage/stable/2023-01-01/storage.json
-  - type: SDKs
-    url: https://docs.microsoft.com/en-us/azure/storage/common/storage-samples
-- name: Azure Cosmos DB API
-  description: Globally distributed, multi-model database service
-  image: https://azure.microsoft.com/svghandler/cosmos-db.svg
-  humanURL: https://azure.microsoft.com/en-us/services/cosmos-db/
-  baseURL: https://management.azure.com
-  tags:
-  - Database
-  - NoSQL
-  - Distributed Database
-  properties:
-  - type: Documentation
-    url: https://docs.microsoft.com/en-us/rest/api/cosmos-db/
-  - type: OpenAPI
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2023-04-15/cosmos-db.json
-  - type: Pricing
-    url: https://azure.microsoft.com/en-us/pricing/details/cosmos-db/
-- name: Azure Cognitive Services API
-  description: AI and machine learning APIs for vision, speech, language, and decision
-  image: https://azure.microsoft.com/svghandler/cognitive-services.svg
-  humanURL: https://azure.microsoft.com/en-us/services/cognitive-services/
-  baseURL: https://api.cognitive.microsoft.com
-  tags:
-  - AI
-  - Machine Learning
-  - Computer Vision
-  - NLP
-  properties:
-  - type: Documentation
-    url: https://docs.microsoft.com/en-us/azure/cognitive-services/
-  - type: OpenAPI
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/cognitiveservices/data-plane/
-  - type: Pricing
-    url: https://azure.microsoft.com/en-us/pricing/details/cognitive-services/
-- name: Azure Active Directory API
-  description: Identity and access management service
-  image: https://azure.microsoft.com/svghandler/active-directory.svg
-  humanURL: https://azure.microsoft.com/en-us/services/active-directory/
-  baseURL: https://graph.microsoft.com
-  tags:
-  - Identity
-  - Authentication
-  - Authorization
-  - IAM
-  properties:
-  - type: Documentation
-    url: https://docs.microsoft.com/en-us/graph/api/resources/azure-ad-overview
-  - type: OpenAPI
-    url: https://docs.microsoft.com/en-us/graph/api/overview
-  - type: SDKs
-    url: https://docs.microsoft.com/en-us/graph/sdks/sdks-overview
-- name: Azure Kubernetes Service API
-  description: Managed Kubernetes container orchestration service
-  image: https://azure.microsoft.com/svghandler/kubernetes-service.svg
-  humanURL: https://azure.microsoft.com/en-us/services/kubernetes-service/
-  baseURL: https://management.azure.com
-  tags:
-  - Containers
-  - Kubernetes
-  - Orchestration
-  properties:
-  - type: Documentation
-    url: https://docs.microsoft.com/en-us/rest/api/aks/
-  - type: OpenAPI
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/containerservice/resource-manager/Microsoft.ContainerService/stable/2023-05-01/managedClusters.json
-  - type: Tutorials
-    url: https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-app
-- name: Azure Functions API
-  description: Serverless compute service for event-driven applications
-  image: https://azure.microsoft.com/svghandler/functions.svg
-  humanURL: https://azure.microsoft.com/en-us/services/functions/
-  baseURL: https://management.azure.com
-  tags:
-  - Serverless
-  - Functions
-  - Event-Driven
-  properties:
-  - type: Documentation
-    url: https://docs.microsoft.com/en-us/azure/azure-functions/
-  - type: OpenAPI
-    url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/web/resource-manager/Microsoft.Web/stable/2022-03-01/WebApps.json
-  - type: Pricing
-    url: https://azure.microsoft.com/en-us/pricing/details/functions/
+  - aid: azure-cloud:azure-compute-api
+    name: Azure Compute API
+    description: Virtual machines, containers, and serverless computing services.
+    humanURL: https://azure.microsoft.com/en-us/services/virtual-machines/
+    baseURL: https://management.azure.com
+    tags:
+      - Compute
+      - Virtual Machines
+      - Containers
+    properties:
+      - type: Documentation
+        url: https://docs.microsoft.com/en-us/rest/api/compute/
 common:
-- type: Portal
-  url: https://portal.azure.com
-- type: Documentation
-  url: https://docs.microsoft.com/en-us/azure/
-- type: Pricing
-  url: https://azure.microsoft.com/en-us/pricing/
-- type: Status
-  url: https://status.azure.com
-- type: Blog
-  url: https://azure.microsoft.com/en-us/blog/
-- type: Support
-  url: https://azure.microsoft.com/en-us/support/
-- type: Terms of Service
-  url: https://azure.microsoft.com/en-us/support/legal/
+  - type: Portal
+    url: https://portal.azure.com
+  - type: Documentation
+    url: https://docs.microsoft.com/en-us/azure/
+  - type: Status
+    url: https://status.azure.com
+  - type: Blog
+    url: https://azure.microsoft.com/en-us/blog/
+  - type: Support
+    url: https://azure.microsoft.com/en-us/support/
+  - type: Terms of Service
+    url: https://azure.microsoft.com/en-us/support/legal/
+  - type: Privacy Policy
+    url: https://privacy.microsoft.com/en-us/privacystatement
+  - type: GitHub Organization
+    url: https://github.com/Azure
 maintainers:
-- name: Microsoft Azure
-  email: azuresupport@microsoft.com
-  url: https://azure.microsoft.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
