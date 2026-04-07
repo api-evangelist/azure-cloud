@@ -8,10 +8,10 @@ type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - Cloud Computing
-  - Infrastructure
-  - Platform as a Service
   - IaaS
+  - Infrastructure
   - PaaS
+  - Platform as a Service
   - SaaS
 url: >-
   https://raw.githubusercontent.com/api-evangelist/azure-cloud/refs/heads/main/apis.yml
@@ -26,8 +26,8 @@ apis:
     baseURL: https://management.azure.com
     tags:
       - Compute
-      - Virtual Machines
       - Containers
+      - Virtual Machines
     properties:
       - type: Documentation
         url: https://docs.microsoft.com/en-us/rest/api/compute/
