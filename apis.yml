@@ -218,6 +218,8 @@ apis:
       - type: Documentation
         url: https://learn.microsoft.com/en-us/rest/api/iothub/
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/showcase/microsoft-azure-cloud
   - type: Portal
     url: https://portal.azure.com
   - type: Documentation
