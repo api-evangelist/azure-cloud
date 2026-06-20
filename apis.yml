@@ -6,7 +6,7 @@ description: >-
   Azure provides IaaS, PaaS, and SaaS delivery models through a global network
   of datacenters, with REST APIs secured by Microsoft Entra ID authentication.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - AI
   - Cloud Computing
