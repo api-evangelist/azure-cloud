@@ -244,11 +244,11 @@ common:
     url: https://github.com/Azure
   - type: Pricing
     url: https://azure.microsoft.com/en-us/pricing/
-  - type: SignUp
+  - type: Signup
     url: https://azure.microsoft.com/en-us/free/
   - type: CLI
     url: https://learn.microsoft.com/en-us/cli/azure/
-  - type: SDK
+  - type: SDKs
     url: https://azure.github.io/azure-sdk/
   - type: Features
     data:
