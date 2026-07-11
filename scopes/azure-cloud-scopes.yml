@@ -1,0 +1,21 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/azure-cloud-openapi.yml
+schemes:
+- name: entra
+  source: openapi/azure-cloud-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+    tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+  - flow: clientCredentials
+    tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+  description: Microsoft Entra ID OAuth 2.0 bearer token (scope https://management.azure.com/.default)
+scopes:
+- scope: https://management.azure.com/.default
+  description: Manage Azure resources
+  flows:
+  - authorizationCode
+  - clientCredentials
+  sources:
+  - openapi/azure-cloud-openapi.yml

@@ -218,6 +218,8 @@ apis:
       - type: Documentation
         url: https://learn.microsoft.com/en-us/rest/api/iothub/
 common:
+  - type: OAuthScopes
+    url: scopes/azure-cloud-scopes.yml
   - type: LinkedIn
     url: https://www.linkedin.com/showcase/microsoft-azure-cloud
   - type: Portal
