@@ -218,6 +218,10 @@ apis:
       - type: Documentation
         url: https://learn.microsoft.com/en-us/rest/api/iothub/
 common:
+  - type: DomainSecurity
+    url: security/azure-cloud-domain-security.yml
+  - type: Authentication
+    url: authentication/azure-cloud-authentication.yml
   - type: OAuthScopes
     url: scopes/azure-cloud-scopes.yml
   - type: LinkedIn
