@@ -218,6 +218,8 @@ apis:
       - type: Documentation
         url: https://learn.microsoft.com/en-us/rest/api/iothub/
 common:
+  - type: AgenticAccess
+    url: agentic-access/azure-cloud-agentic-access.yml
   - type: DomainSecurity
     url: security/azure-cloud-domain-security.yml
   - type: Authentication
