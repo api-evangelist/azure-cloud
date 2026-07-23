@@ -1,0 +1,70 @@
+openapi: 3.1.0
+info:
+  title: Azure Compute REST Availability Sets Virtual Machine Scale Sets API
+  version: '2024-03-01'
+  description: 'Azure Resource Manager (ARM) REST API for managing Azure compute resources
+
+    (virtual machines, virtual machine scale sets, disks, snapshots, images,
+
+    availability sets). Requests are sent to `https://management.azure.com` and
+
+    authenticated with Microsoft Entra ID OAuth 2.0 bearer tokens.
+
+    '
+  contact:
+    name: Azure Compute REST API
+    url: https://learn.microsoft.com/en-us/rest/api/compute/
+servers:
+- url: https://management.azure.com
+  description: Azure Resource Manager
+tags:
+- name: Virtual Machine Scale Sets
+  description: VMSS lifecycle operations
+paths:
+  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets:
+    get:
+      summary: List VM scale sets in a resource group
+      operationId: listVmScaleSets
+      tags:
+      - Virtual Machine Scale Sets
+      parameters:
+      - in: path
+        name: subscriptionId
+        required: true
+        schema:
+          type: string
+      - in: path
+        name: resourceGroupName
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: api-version
+        required: true
+        schema:
+          type: string
+          default: '2024-03-01'
+      responses:
+        '200':
+          description: Scale sets
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - entra: []
+components:
+  securitySchemes:
+    entra:
+      type: oauth2
+      description: Microsoft Entra ID OAuth 2.0 bearer token (scope https://management.azure.com/.default)
+      flows:
+        authorizationCode:
+          authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+          scopes:
+            https://management.azure.com/.default: Manage Azure resources
+        clientCredentials:
+          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+          scopes:
+            https://management.azure.com/.default: Manage Azure resources
