@@ -6,7 +6,20 @@ description: >-
   Azure provides IaaS, PaaS, and SaaS delivery models through a global network
   of datacenters, with REST APIs secured by Microsoft Entra ID authentication.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/azure-cloud.png
 tags:
   - AI
   - Cloud Computing
@@ -26,197 +39,228 @@ created: '2024-01-01'
 modified: '2026-04-19'
 specificationVersion: '0.19'
 apis:
-  - aid: azure-cloud:azure-compute-api
-    name: Azure Compute API
-    description: >-
-      Manage virtual machines, containers, serverless functions, and Kubernetes
-      clusters. Includes Azure Virtual Machines, Azure Kubernetes Service (AKS),
-      Azure Container Apps, Azure Functions, and App Service APIs.
-    humanURL: https://learn.microsoft.com/en-us/rest/api/compute/
-    baseURL: https://management.azure.com
-    tags:
-      - App Service
-      - Compute
-      - Containers
-      - Functions
-      - Kubernetes
-      - Serverless
-      - Virtual Machines
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/rest/api/compute/
-      - type: GettingStarted
-        url: https://learn.microsoft.com/en-us/azure/virtual-machines/
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/compute/resource-manager/Microsoft.Compute/stable/2023-03-01/compute.json
-  - aid: azure-cloud:azure-storage-api
-    name: Azure Storage API
-    description: >-
-      Scalable cloud storage REST APIs for blobs, files, queues, and tables.
-      Includes Blob Storage, Azure Files, Queue Storage, Table Storage, and
-      Azure Data Lake Storage.
-    humanURL: https://learn.microsoft.com/en-us/rest/api/storageservices/
-    baseURL: https://management.azure.com
-    tags:
-      - Blob Storage
-      - Cloud Storage
-      - File Storage
-      - Object Storage
-      - Queue Storage
-      - Storage
-      - Table Storage
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/rest/api/storageservices/
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/storage/resource-manager/Microsoft.Storage/stable/2023-01-01/storage.json
-  - aid: azure-cloud:azure-networking-api
-    name: Azure Networking API
-    description: >-
-      REST APIs for Azure networking resources including Virtual Networks,
-      Load Balancers, Application Gateways, VPN Gateways, Azure Firewall,
-      Front Door, and ExpressRoute.
-    humanURL: https://learn.microsoft.com/en-us/rest/api/virtualnetwork/
-    baseURL: https://management.azure.com
-    tags:
-      - ExpressRoute
-      - Firewall
-      - Load Balancer
-      - Networking
-      - Virtual Network
-      - VPN
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/rest/api/virtualnetwork/
-  - aid: azure-cloud:azure-databases-api
-    name: Azure Databases API
-    description: >-
-      Managed database REST APIs for Azure SQL Database, Azure Cosmos DB,
-      Azure Database for PostgreSQL, Azure Database for MySQL, and
-      Azure Cache for Redis.
-    humanURL: https://learn.microsoft.com/en-us/rest/api/sql/
-    baseURL: https://management.azure.com
-    tags:
-      - Cosmos DB
-      - Databases
-      - MySQL
-      - NoSQL
-      - PostgreSQL
-      - Redis
-      - SQL
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/rest/api/sql/
-  - aid: azure-cloud:azure-ai-api
-    name: Azure AI Services API
-    description: >-
-      REST APIs for Azure AI and Machine Learning services including
-      Azure OpenAI Service, Azure Machine Learning, Azure AI Search,
-      Computer Vision, Speech, and Document Intelligence.
-    humanURL: https://learn.microsoft.com/en-us/azure/ai-services/
-    baseURL: https://management.azure.com
-    tags:
-      - AI
-      - Artificial Intelligence
-      - Computer Vision
-      - Language
-      - Machine Learning
-      - OpenAI
-      - Speech
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/azure/ai-services/
-      - type: APIReference
-        url: https://learn.microsoft.com/en-us/rest/api/cognitiveservices/
-  - aid: azure-cloud:azure-security-api
-    name: Azure Security API
-    description: >-
-      REST APIs for Azure security services including Microsoft Defender for
-      Cloud, Key Vault, Microsoft Sentinel, and Web Application Firewall.
-    humanURL: https://learn.microsoft.com/en-us/rest/api/defenderforcloud/
-    baseURL: https://management.azure.com
-    tags:
-      - Defender
-      - Identity
-      - Key Vault
-      - Security
-      - Sentinel
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/rest/api/defenderforcloud/
-  - aid: azure-cloud:azure-integration-api
-    name: Azure Integration API
-    description: >-
-      REST APIs for Azure integration services including Service Bus, Event
-      Grid, Logic Apps, and API Management for building event-driven and
-      workflow-based applications.
-    humanURL: https://learn.microsoft.com/en-us/rest/api/servicebus/
-    baseURL: https://management.azure.com
-    tags:
-      - API Management
-      - Event Grid
-      - Integration
-      - Logic Apps
-      - Messaging
-      - Service Bus
-      - Workflows
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/rest/api/servicebus/
-  - aid: azure-cloud:azure-analytics-api
-    name: Azure Analytics API
-    description: >-
-      REST APIs for Azure analytics services including Synapse Analytics,
-      Data Factory, Stream Analytics, Data Explorer, and Microsoft Fabric
-      for big data and real-time analytics workloads.
-    humanURL: https://learn.microsoft.com/en-us/rest/api/synapse/
-    baseURL: https://management.azure.com
-    tags:
-      - Analytics
-      - Big Data
-      - Data Factory
-      - ETL
-      - Stream Analytics
-      - Synapse
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/rest/api/synapse/
-  - aid: azure-cloud:azure-management-api
-    name: Azure Management API
-    description: >-
-      REST APIs for Azure management and governance including Azure Resource
-      Manager, Azure Monitor, Azure Policy, Cost Management, and Azure Advisor.
-    humanURL: https://learn.microsoft.com/en-us/rest/api/azure/
-    baseURL: https://management.azure.com
-    tags:
-      - Cost Management
-      - Governance
-      - Management
-      - Monitor
-      - Policy
-      - Resource Manager
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/rest/api/resources/
-      - type: Authentication
-        url: https://learn.microsoft.com/en-us/rest/api/azure/#register-your-client-application-with-microsoft-entra-id
-  - aid: azure-cloud:azure-iot-api
-    name: Azure IoT API
-    description: >-
-      REST APIs for Azure IoT services including IoT Hub, IoT Central,
-      IoT Edge, and Azure Digital Twins for connecting, monitoring, and
-      managing IoT devices at scale.
-    humanURL: https://learn.microsoft.com/en-us/rest/api/iothub/
-    baseURL: https://management.azure.com
-    tags:
-      - Digital Twins
-      - IoT
-      - IoT Central
-      - IoT Edge
-      - IoT Hub
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/rest/api/iothub/
+- aid: azure-cloud:azure-networking-api
+  name: Azure Networking API
+  description: >-
+    REST APIs for Azure networking resources including Virtual Networks, Load Balancers, Application Gateways,
+    VPN Gateways, Azure Firewall, Front Door, and ExpressRoute.
+  humanURL: https://learn.microsoft.com/en-us/rest/api/virtualnetwork/
+  baseURL: https://management.azure.com
+  tags:
+  - ExpressRoute
+  - Firewall
+  - Load Balancer
+  - Networking
+  - Virtual Network
+  - VPN
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/virtualnetwork/
+- aid: azure-cloud:azure-databases-api
+  name: Azure Databases API
+  description: >-
+    Managed database REST APIs for Azure SQL Database, Azure Cosmos DB, Azure Database for PostgreSQL,
+    Azure Database for MySQL, and Azure Cache for Redis.
+  humanURL: https://learn.microsoft.com/en-us/rest/api/sql/
+  baseURL: https://management.azure.com
+  tags:
+  - Cosmos DB
+  - Databases
+  - MySQL
+  - NoSQL
+  - PostgreSQL
+  - Redis
+  - SQL
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/sql/
+- aid: azure-cloud:azure-ai-api
+  name: Azure AI Services API
+  description: >-
+    REST APIs for Azure AI and Machine Learning services including Azure OpenAI Service, Azure Machine
+    Learning, Azure AI Search, Computer Vision, Speech, and Document Intelligence.
+  humanURL: https://learn.microsoft.com/en-us/azure/ai-services/
+  baseURL: https://management.azure.com
+  tags:
+  - AI
+  - Artificial Intelligence
+  - Computer Vision
+  - Language
+  - Machine Learning
+  - OpenAI
+  - Speech
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/azure/ai-services/
+  - type: APIReference
+    url: https://learn.microsoft.com/en-us/rest/api/cognitiveservices/
+- aid: azure-cloud:azure-security-api
+  name: Azure Security API
+  description: >-
+    REST APIs for Azure security services including Microsoft Defender for Cloud, Key Vault, Microsoft
+    Sentinel, and Web Application Firewall.
+  humanURL: https://learn.microsoft.com/en-us/rest/api/defenderforcloud/
+  baseURL: https://management.azure.com
+  tags:
+  - Defender
+  - Identity
+  - Key Vault
+  - Security
+  - Sentinel
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/defenderforcloud/
+- aid: azure-cloud:azure-integration-api
+  name: Azure Integration API
+  description: >-
+    REST APIs for Azure integration services including Service Bus, Event Grid, Logic Apps, and API Management
+    for building event-driven and workflow-based applications.
+  humanURL: https://learn.microsoft.com/en-us/rest/api/servicebus/
+  baseURL: https://management.azure.com
+  tags:
+  - API Management
+  - Event Grid
+  - Integration
+  - Logic Apps
+  - Messaging
+  - Service Bus
+  - Workflows
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/servicebus/
+- aid: azure-cloud:azure-analytics-api
+  name: Azure Analytics API
+  description: >-
+    REST APIs for Azure analytics services including Synapse Analytics, Data Factory, Stream Analytics,
+    Data Explorer, and Microsoft Fabric for big data and real-time analytics workloads.
+  humanURL: https://learn.microsoft.com/en-us/rest/api/synapse/
+  baseURL: https://management.azure.com
+  tags:
+  - Analytics
+  - Big Data
+  - Data Factory
+  - ETL
+  - Stream Analytics
+  - Synapse
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/synapse/
+- aid: azure-cloud:azure-management-api
+  name: Azure Management API
+  description: >-
+    REST APIs for Azure management and governance including Azure Resource Manager, Azure Monitor, Azure
+    Policy, Cost Management, and Azure Advisor.
+  humanURL: https://learn.microsoft.com/en-us/rest/api/azure/
+  baseURL: https://management.azure.com
+  tags:
+  - Cost Management
+  - Governance
+  - Management
+  - Monitor
+  - Policy
+  - Resource Manager
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/resources/
+  - type: Authentication
+    url: >-
+      https://learn.microsoft.com/en-us/rest/api/azure/#register-your-client-application-with-microsoft-entra-id
+- aid: azure-cloud:azure-iot-api
+  name: Azure IoT API
+  description: >-
+    REST APIs for Azure IoT services including IoT Hub, IoT Central, IoT Edge, and Azure Digital Twins
+    for connecting, monitoring, and managing IoT devices at scale.
+  humanURL: https://learn.microsoft.com/en-us/rest/api/iothub/
+  baseURL: https://management.azure.com
+  tags:
+  - Digital Twins
+  - IoT
+  - IoT Central
+  - IoT Edge
+  - IoT Hub
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/iothub/
+- aid: azure-cloud:azure-cloud-availability-sets-api
+  name: Microsoft Azure Cloud Availability Sets API
+  description: Availability sets
+  humanURL: https://learn.microsoft.com/en-us/rest/api/compute/
+  baseURL: https://management.azure.com
+  tags:
+  - Availability Sets
+  properties:
+  - type: OpenAPI
+    url: openapi/azure-cloud-availability-sets-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/compute/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/azure/virtual-machines/
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/storageservices/
+- aid: azure-cloud:azure-cloud-disks-api
+  name: Microsoft Azure Cloud Disks API
+  description: Managed disks
+  humanURL: https://learn.microsoft.com/en-us/rest/api/compute/
+  baseURL: https://management.azure.com
+  tags:
+  - Disks
+  properties:
+  - type: OpenAPI
+    url: openapi/azure-cloud-disks-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/compute/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/azure/virtual-machines/
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/storageservices/
+- aid: azure-cloud:azure-cloud-snapshots-api
+  name: Microsoft Azure Cloud Snapshots API
+  description: Managed disk snapshots
+  humanURL: https://learn.microsoft.com/en-us/rest/api/compute/
+  baseURL: https://management.azure.com
+  tags:
+  - Snapshots
+  properties:
+  - type: OpenAPI
+    url: openapi/azure-cloud-snapshots-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/compute/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/azure/virtual-machines/
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/storageservices/
+- aid: azure-cloud:azure-cloud-virtual-machine-scale-sets-api
+  name: Microsoft Azure Cloud Virtual Machine Scale Sets API
+  description: VMSS lifecycle operations
+  humanURL: https://learn.microsoft.com/en-us/rest/api/compute/
+  baseURL: https://management.azure.com
+  tags:
+  - Virtual Machine Scale Sets
+  properties:
+  - type: OpenAPI
+    url: openapi/azure-cloud-virtual-machine-scale-sets-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/compute/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/azure/virtual-machines/
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/storageservices/
+- aid: azure-cloud:azure-cloud-virtual-machines-api
+  name: Microsoft Azure Cloud Virtual Machines API
+  description: VM lifecycle operations
+  humanURL: https://learn.microsoft.com/en-us/rest/api/compute/
+  baseURL: https://management.azure.com
+  tags:
+  - Virtual Machines
+  properties:
+  - type: OpenAPI
+    url: openapi/azure-cloud-virtual-machines-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/compute/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/azure/virtual-machines/
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/storageservices/
 common:
   - type: AgenticAccess
     url: agentic-access/azure-cloud-agentic-access.yml
