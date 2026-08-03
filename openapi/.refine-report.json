@@ -1,0 +1,22 @@
+{
+  "provider": "azure-cloud",
+  "sources": [
+    "azure-cloud-availability-sets-api-openapi.yml",
+    "azure-cloud-disks-api-openapi.yml",
+    "azure-cloud-snapshots-api-openapi.yml",
+    "azure-cloud-virtual-machine-scale-sets-api-openapi.yml",
+    "azure-cloud-virtual-machines-api-openapi.yml"
+  ],
+  "outputs": [
+    "azure-cloud-availability-sets-api-openapi.yml",
+    "azure-cloud-disks-api-openapi.yml",
+    "azure-cloud-snapshots-api-openapi.yml",
+    "azure-cloud-virtual-machine-scale-sets-api-openapi.yml",
+    "azure-cloud-virtual-machines-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
