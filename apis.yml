@@ -37,7 +37,7 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/azure-cloud/refs/heads/main/apis.yml
 created: '2024-01-01'
 modified: '2026-04-19'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: azure-cloud:azure-networking-api
   name: Azure Networking API
