@@ -1,0 +1,385 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Azure Compute REST Availability Sets Virtual Machines API",
+    "version": "2024-03-01"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Virtual Machines",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List virtual machines in a subscription",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://management.azure.com/subscriptions/:subscriptionId/providers/Microsoft.Compute/virtualMachines",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "oauth2",
+              "flow": "client_credentials",
+              "accessTokenUrl": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+              "credentials": {
+                "clientId": "{{clientId}}",
+                "clientSecret": "{{clientSecret}}"
+              }
+            }
+          },
+          "docs": "List virtual machines in a subscription"
+        },
+        {
+          "info": {
+            "name": "List virtual machines in a resource group",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://management.azure.com/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Compute/virtualMachines",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "resourceGroupName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "oauth2",
+              "flow": "client_credentials",
+              "accessTokenUrl": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+              "credentials": {
+                "clientId": "{{clientId}}",
+                "clientSecret": "{{clientSecret}}"
+              }
+            }
+          },
+          "docs": "List virtual machines in a resource group"
+        },
+        {
+          "info": {
+            "name": "Get a virtual machine",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://management.azure.com/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Compute/virtualMachines/:vmName",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "resourceGroupName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "vmName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "oauth2",
+              "flow": "client_credentials",
+              "accessTokenUrl": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+              "credentials": {
+                "clientId": "{{clientId}}",
+                "clientSecret": "{{clientSecret}}"
+              }
+            }
+          },
+          "docs": "Get a virtual machine"
+        },
+        {
+          "info": {
+            "name": "Create or update a virtual machine",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://management.azure.com/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Compute/virtualMachines/:vmName",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "resourceGroupName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "vmName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "oauth2",
+              "flow": "client_credentials",
+              "accessTokenUrl": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+              "credentials": {
+                "clientId": "{{clientId}}",
+                "clientSecret": "{{clientSecret}}"
+              }
+            }
+          },
+          "docs": "Create or update a virtual machine"
+        },
+        {
+          "info": {
+            "name": "Delete a virtual machine",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://management.azure.com/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Compute/virtualMachines/:vmName",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "resourceGroupName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "vmName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "oauth2",
+              "flow": "client_credentials",
+              "accessTokenUrl": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+              "credentials": {
+                "clientId": "{{clientId}}",
+                "clientSecret": "{{clientSecret}}"
+              }
+            }
+          },
+          "docs": "Delete a virtual machine"
+        },
+        {
+          "info": {
+            "name": "Start a virtual machine",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://management.azure.com/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Compute/virtualMachines/:vmName/start",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "resourceGroupName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "vmName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "oauth2",
+              "flow": "client_credentials",
+              "accessTokenUrl": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+              "credentials": {
+                "clientId": "{{clientId}}",
+                "clientSecret": "{{clientSecret}}"
+              }
+            }
+          },
+          "docs": "Start a virtual machine"
+        },
+        {
+          "info": {
+            "name": "Deallocate a virtual machine",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://management.azure.com/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Compute/virtualMachines/:vmName/deallocate",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "resourceGroupName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "vmName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "oauth2",
+              "flow": "client_credentials",
+              "accessTokenUrl": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+              "credentials": {
+                "clientId": "{{clientId}}",
+                "clientSecret": "{{clientSecret}}"
+              }
+            }
+          },
+          "docs": "Deallocate a virtual machine"
+        },
+        {
+          "info": {
+            "name": "Restart a virtual machine",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://management.azure.com/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Compute/virtualMachines/:vmName/restart",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "resourceGroupName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "vmName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "oauth2",
+              "flow": "client_credentials",
+              "accessTokenUrl": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+              "credentials": {
+                "clientId": "{{clientId}}",
+                "clientSecret": "{{clientSecret}}"
+              }
+            }
+          },
+          "docs": "Restart a virtual machine"
+        },
+        {
+          "info": {
+            "name": "Power off a virtual machine",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://management.azure.com/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Compute/virtualMachines/:vmName/powerOff",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "resourceGroupName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "vmName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "oauth2",
+              "flow": "client_credentials",
+              "accessTokenUrl": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+              "credentials": {
+                "clientId": "{{clientId}}",
+                "clientSecret": "{{clientSecret}}"
+              }
+            }
+          },
+          "docs": "Power off a virtual machine"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

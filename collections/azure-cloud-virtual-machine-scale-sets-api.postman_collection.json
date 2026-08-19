@@ -1,0 +1,181 @@
+{
+  "item": [
+    {
+      "id": "a5b1d874-497a-4fae-a628-b870ffdd4dc0",
+      "name": "Virtual Machine Scale Sets",
+      "description": {
+        "content": "VMSS lifecycle operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4be56b0e-7f1c-4ba7-9015-54a6125f6249",
+          "name": "List VM scale sets in a resource group",
+          "request": {
+            "name": "List VM scale sets in a resource group",
+            "description": {},
+            "url": {
+              "path": [
+                "subscriptions",
+                ":subscriptionId",
+                "resourceGroups",
+                ":resourceGroupName",
+                "providers",
+                "Microsoft.Compute",
+                "virtualMachineScaleSets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "2024-03-01",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "subscriptionId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceGroupName",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "https://management.azure.com/.default"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+                },
+                {
+                  "key": "authUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "authorization_code"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "02200cd6-6d96-4f21-b8a6-a7add313a80c",
+              "name": "Scale sets",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "resourceGroups",
+                    ":resourceGroupName",
+                    "providers",
+                    "Microsoft.Compute",
+                    "virtualMachineScaleSets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2024-03-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceGroupName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://management.azure.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "3057b68d-7fe9-431b-8773-386745bbbdab",
+    "name": "Azure Compute REST Availability Sets Virtual Machine Scale Sets API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Azure Resource Manager (ARM) REST API for managing Azure compute resources\n(virtual machines, virtual machine scale sets, disks, snapshots, images,\navailability sets). Requests are sent to `https://management.azure.com` and\nauthenticated with Microsoft Entra ID OAuth 2.0 bearer tokens.\n\n\nContact Support:\n Name: Azure Compute REST API",
+      "type": "text/plain"
+    }
+  }
+}

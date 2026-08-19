@@ -1,0 +1,181 @@
+{
+  "item": [
+    {
+      "id": "8a6879fa-f337-440a-86bf-33c933334b9d",
+      "name": "Disks",
+      "description": {
+        "content": "Managed disks",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ae6d649a-b7bf-4739-abf6-07c3a4de4603",
+          "name": "List managed disks in a resource group",
+          "request": {
+            "name": "List managed disks in a resource group",
+            "description": {},
+            "url": {
+              "path": [
+                "subscriptions",
+                ":subscriptionId",
+                "resourceGroups",
+                ":resourceGroupName",
+                "providers",
+                "Microsoft.Compute",
+                "disks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "2024-03-01",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "subscriptionId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceGroupName",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "https://management.azure.com/.default"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+                },
+                {
+                  "key": "authUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "authorization_code"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "86e65d31-896b-4749-b834-c9665ac8ded5",
+              "name": "Disks",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "resourceGroups",
+                    ":resourceGroupName",
+                    "providers",
+                    "Microsoft.Compute",
+                    "disks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2024-03-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceGroupName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://management.azure.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "c88c454b-1662-487a-9e85-a5917de77029",
+    "name": "Azure Compute REST Availability Sets Disks API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Azure Resource Manager (ARM) REST API for managing Azure compute resources\n(virtual machines, virtual machine scale sets, disks, snapshots, images,\navailability sets). Requests are sent to `https://management.azure.com` and\nauthenticated with Microsoft Entra ID OAuth 2.0 bearer tokens.\n\n\nContact Support:\n Name: Azure Compute REST API",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Azure Compute REST Availability Sets Virtual Machine Scale Sets API",
+    "version": "2024-03-01"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Virtual Machine Scale Sets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List VM scale sets in a resource group",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://management.azure.com/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.Compute/virtualMachineScaleSets",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "resourceGroupName",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "oauth2",
+              "flow": "client_credentials",
+              "accessTokenUrl": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+              "credentials": {
+                "clientId": "{{clientId}}",
+                "clientSecret": "{{clientSecret}}"
+              }
+            }
+          },
+          "docs": "List VM scale sets in a resource group"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

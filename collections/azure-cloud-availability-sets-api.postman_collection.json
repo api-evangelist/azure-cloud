@@ -1,0 +1,181 @@
+{
+  "item": [
+    {
+      "id": "9b68fcd2-aa40-4ffd-bcd8-4637d47e00ad",
+      "name": "Availability Sets",
+      "description": {
+        "content": "Availability sets",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3c61d88d-d4dd-4c45-b0f5-fc490cf06e60",
+          "name": "List availability sets in a resource group",
+          "request": {
+            "name": "List availability sets in a resource group",
+            "description": {},
+            "url": {
+              "path": [
+                "subscriptions",
+                ":subscriptionId",
+                "resourceGroups",
+                ":resourceGroupName",
+                "providers",
+                "Microsoft.Compute",
+                "availabilitySets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "2024-03-01",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "subscriptionId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceGroupName",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "https://management.azure.com/.default"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+                },
+                {
+                  "key": "authUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "authorization_code"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "3220f8c8-7c93-4f2a-a8e5-85b4bb776197",
+              "name": "Availability sets",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "resourceGroups",
+                    ":resourceGroupName",
+                    "providers",
+                    "Microsoft.Compute",
+                    "availabilitySets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2024-03-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceGroupName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://management.azure.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "68115425-2490-4a53-b0b2-43f0bdd5c7f3",
+    "name": "Azure Compute REST Availability Sets API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Azure Resource Manager (ARM) REST API for managing Azure compute resources\n(virtual machines, virtual machine scale sets, disks, snapshots, images,\navailability sets). Requests are sent to `https://management.azure.com` and\nauthenticated with Microsoft Entra ID OAuth 2.0 bearer tokens.\n\n\nContact Support:\n Name: Azure Compute REST API",
+      "type": "text/plain"
+    }
+  }
+}

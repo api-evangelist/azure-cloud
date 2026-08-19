@@ -1,0 +1,1604 @@
+{
+  "item": [
+    {
+      "id": "8230b57d-452d-41d4-ad27-60c2d22d158e",
+      "name": "Virtual Machines",
+      "description": {
+        "content": "VM lifecycle operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "84e8d8df-a062-4978-aa23-2e75005d799c",
+          "name": "List virtual machines in a subscription",
+          "request": {
+            "name": "List virtual machines in a subscription",
+            "description": {},
+            "url": {
+              "path": [
+                "subscriptions",
+                ":subscriptionId",
+                "providers",
+                "Microsoft.Compute",
+                "virtualMachines"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "2024-03-01",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "subscriptionId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "https://management.azure.com/.default"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+                },
+                {
+                  "key": "authUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "authorization_code"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "fd7e5a4a-acab-4e93-ada4-86077de32971",
+              "name": "A page of VMs",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "providers",
+                    "Microsoft.Compute",
+                    "virtualMachines"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2024-03-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"value\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"string\",\n      \"location\": \"string\",\n      \"tags\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"properties\": {\n        \"hardwareProfile\": {\n          \"vmSize\": \"string\"\n        },\n        \"storageProfile\": {},\n        \"osProfile\": {},\n        \"networkProfile\": {},\n        \"provisioningState\": \"string\"\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"string\",\n      \"location\": \"string\",\n      \"tags\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"properties\": {\n        \"hardwareProfile\": {\n          \"vmSize\": \"string\"\n        },\n        \"storageProfile\": {},\n        \"osProfile\": {},\n        \"networkProfile\": {},\n        \"provisioningState\": \"string\"\n      }\n    }\n  ],\n  \"nextLink\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "271bd224-a738-4a1b-91da-a5cd5fc8ec30",
+          "name": "List virtual machines in a resource group",
+          "request": {
+            "name": "List virtual machines in a resource group",
+            "description": {},
+            "url": {
+              "path": [
+                "subscriptions",
+                ":subscriptionId",
+                "resourceGroups",
+                ":resourceGroupName",
+                "providers",
+                "Microsoft.Compute",
+                "virtualMachines"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "2024-03-01",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "subscriptionId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceGroupName",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "https://management.azure.com/.default"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+                },
+                {
+                  "key": "authUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "authorization_code"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "eb8db3e2-e154-4bfc-abd8-5a9ed7a4e911",
+              "name": "A page of VMs",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "resourceGroups",
+                    ":resourceGroupName",
+                    "providers",
+                    "Microsoft.Compute",
+                    "virtualMachines"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2024-03-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceGroupName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"value\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"string\",\n      \"location\": \"string\",\n      \"tags\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"properties\": {\n        \"hardwareProfile\": {\n          \"vmSize\": \"string\"\n        },\n        \"storageProfile\": {},\n        \"osProfile\": {},\n        \"networkProfile\": {},\n        \"provisioningState\": \"string\"\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"string\",\n      \"location\": \"string\",\n      \"tags\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"properties\": {\n        \"hardwareProfile\": {\n          \"vmSize\": \"string\"\n        },\n        \"storageProfile\": {},\n        \"osProfile\": {},\n        \"networkProfile\": {},\n        \"provisioningState\": \"string\"\n      }\n    }\n  ],\n  \"nextLink\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "76e3e42c-d3fa-45d4-abac-740ebd7d47ca",
+          "name": "Get a virtual machine",
+          "request": {
+            "name": "Get a virtual machine",
+            "description": {},
+            "url": {
+              "path": [
+                "subscriptions",
+                ":subscriptionId",
+                "resourceGroups",
+                ":resourceGroupName",
+                "providers",
+                "Microsoft.Compute",
+                "virtualMachines",
+                ":vmName"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "2024-03-01",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "subscriptionId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceGroupName",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "vmName",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "https://management.azure.com/.default"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+                },
+                {
+                  "key": "authUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "authorization_code"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "4e3ff1b7-6360-4adc-b857-91aacfa7e34b",
+              "name": "Virtual machine",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "resourceGroups",
+                    ":resourceGroupName",
+                    "providers",
+                    "Microsoft.Compute",
+                    "virtualMachines",
+                    ":vmName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2024-03-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceGroupName",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "vmName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"type\": \"string\",\n  \"location\": \"string\",\n  \"tags\": {\n    \"key_0\": \"string\"\n  },\n  \"properties\": {\n    \"hardwareProfile\": {\n      \"vmSize\": \"string\"\n    },\n    \"storageProfile\": {},\n    \"osProfile\": {},\n    \"networkProfile\": {},\n    \"provisioningState\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b8812347-54ce-45d9-8fe4-cfa2cb97d90b",
+          "name": "Create or update a virtual machine",
+          "request": {
+            "name": "Create or update a virtual machine",
+            "description": {},
+            "url": {
+              "path": [
+                "subscriptions",
+                ":subscriptionId",
+                "resourceGroups",
+                ":resourceGroupName",
+                "providers",
+                "Microsoft.Compute",
+                "virtualMachines",
+                ":vmName"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "2024-03-01",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "subscriptionId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceGroupName",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "vmName",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "https://management.azure.com/.default"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+                },
+                {
+                  "key": "authUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "authorization_code"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"location\": \"<string>\",\n  \"tags\": {\n    \"key_0\": \"<string>\"\n  },\n  \"properties\": {\n    \"hardwareProfile\": {\n      \"vmSize\": \"<string>\"\n    },\n    \"storageProfile\": \"<object>\",\n    \"osProfile\": \"<object>\",\n    \"networkProfile\": \"<object>\",\n    \"provisioningState\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "628de7fe-9eb2-4a86-adb5-525b4675629c",
+              "name": "Updated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "resourceGroups",
+                    ":resourceGroupName",
+                    "providers",
+                    "Microsoft.Compute",
+                    "virtualMachines",
+                    ":vmName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2024-03-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceGroupName",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "vmName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"location\": \"<string>\",\n  \"tags\": {\n    \"key_0\": \"<string>\"\n  },\n  \"properties\": {\n    \"hardwareProfile\": {\n      \"vmSize\": \"<string>\"\n    },\n    \"storageProfile\": \"<object>\",\n    \"osProfile\": \"<object>\",\n    \"networkProfile\": \"<object>\",\n    \"provisioningState\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"type\": \"string\",\n  \"location\": \"string\",\n  \"tags\": {\n    \"key_0\": \"string\"\n  },\n  \"properties\": {\n    \"hardwareProfile\": {\n      \"vmSize\": \"string\"\n    },\n    \"storageProfile\": {},\n    \"osProfile\": {},\n    \"networkProfile\": {},\n    \"provisioningState\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e485e0f5-3d79-4789-9be6-14049f207282",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "resourceGroups",
+                    ":resourceGroupName",
+                    "providers",
+                    "Microsoft.Compute",
+                    "virtualMachines",
+                    ":vmName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2024-03-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceGroupName",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "vmName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"location\": \"<string>\",\n  \"tags\": {\n    \"key_0\": \"<string>\"\n  },\n  \"properties\": {\n    \"hardwareProfile\": {\n      \"vmSize\": \"<string>\"\n    },\n    \"storageProfile\": \"<object>\",\n    \"osProfile\": \"<object>\",\n    \"networkProfile\": \"<object>\",\n    \"provisioningState\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"type\": \"string\",\n  \"location\": \"string\",\n  \"tags\": {\n    \"key_0\": \"string\"\n  },\n  \"properties\": {\n    \"hardwareProfile\": {\n      \"vmSize\": \"string\"\n    },\n    \"storageProfile\": {},\n    \"osProfile\": {},\n    \"networkProfile\": {},\n    \"provisioningState\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fb48f9e1-9051-452d-bb5f-29ad9431fdcb",
+          "name": "Delete a virtual machine",
+          "request": {
+            "name": "Delete a virtual machine",
+            "description": {},
+            "url": {
+              "path": [
+                "subscriptions",
+                ":subscriptionId",
+                "resourceGroups",
+                ":resourceGroupName",
+                "providers",
+                "Microsoft.Compute",
+                "virtualMachines",
+                ":vmName"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "2024-03-01",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "subscriptionId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceGroupName",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "vmName",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "https://management.azure.com/.default"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+                },
+                {
+                  "key": "authUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "authorization_code"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "95272d60-887a-400c-a432-295d0d047903",
+              "name": "Accepted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "resourceGroups",
+                    ":resourceGroupName",
+                    "providers",
+                    "Microsoft.Compute",
+                    "virtualMachines",
+                    ":vmName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2024-03-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceGroupName",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "vmName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Accepted",
+              "code": 202,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "e1f47518-189d-4e16-a2e9-67df35596c2b",
+              "name": "No content",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "resourceGroups",
+                    ":resourceGroupName",
+                    "providers",
+                    "Microsoft.Compute",
+                    "virtualMachines",
+                    ":vmName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2024-03-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceGroupName",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "vmName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7754d0cb-f95a-40d0-bf92-e99baad0463d",
+          "name": "Start a virtual machine",
+          "request": {
+            "name": "Start a virtual machine",
+            "description": {},
+            "url": {
+              "path": [
+                "subscriptions",
+                ":subscriptionId",
+                "resourceGroups",
+                ":resourceGroupName",
+                "providers",
+                "Microsoft.Compute",
+                "virtualMachines",
+                ":vmName",
+                "start"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "2024-03-01",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "subscriptionId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceGroupName",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "vmName",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "https://management.azure.com/.default"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+                },
+                {
+                  "key": "authUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "authorization_code"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "80446098-bc63-435d-9787-834957ace2e5",
+              "name": "Start in progress",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "resourceGroups",
+                    ":resourceGroupName",
+                    "providers",
+                    "Microsoft.Compute",
+                    "virtualMachines",
+                    ":vmName",
+                    "start"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2024-03-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceGroupName",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "vmName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Accepted",
+              "code": 202,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "885a9599-8f0e-48db-8231-f88cef4b2e48",
+          "name": "Deallocate a virtual machine",
+          "request": {
+            "name": "Deallocate a virtual machine",
+            "description": {},
+            "url": {
+              "path": [
+                "subscriptions",
+                ":subscriptionId",
+                "resourceGroups",
+                ":resourceGroupName",
+                "providers",
+                "Microsoft.Compute",
+                "virtualMachines",
+                ":vmName",
+                "deallocate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "2024-03-01",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "subscriptionId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceGroupName",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "vmName",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "https://management.azure.com/.default"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+                },
+                {
+                  "key": "authUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "authorization_code"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "9c5b0a55-2a40-4bc8-b5ad-305eb8c3bbdf",
+              "name": "Deallocate in progress",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "resourceGroups",
+                    ":resourceGroupName",
+                    "providers",
+                    "Microsoft.Compute",
+                    "virtualMachines",
+                    ":vmName",
+                    "deallocate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2024-03-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceGroupName",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "vmName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Accepted",
+              "code": 202,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2356b73b-0d95-4aeb-a2f2-465cae4412cd",
+          "name": "Restart a virtual machine",
+          "request": {
+            "name": "Restart a virtual machine",
+            "description": {},
+            "url": {
+              "path": [
+                "subscriptions",
+                ":subscriptionId",
+                "resourceGroups",
+                ":resourceGroupName",
+                "providers",
+                "Microsoft.Compute",
+                "virtualMachines",
+                ":vmName",
+                "restart"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "2024-03-01",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "subscriptionId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceGroupName",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "vmName",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "https://management.azure.com/.default"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+                },
+                {
+                  "key": "authUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "authorization_code"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "a8a9042c-c7d8-493e-9dff-d3f454d1d1f6",
+              "name": "Restart in progress",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "resourceGroups",
+                    ":resourceGroupName",
+                    "providers",
+                    "Microsoft.Compute",
+                    "virtualMachines",
+                    ":vmName",
+                    "restart"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2024-03-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceGroupName",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "vmName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Accepted",
+              "code": 202,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "55df6a14-6974-45f1-b45d-6d4b70c921a3",
+          "name": "Power off a virtual machine",
+          "request": {
+            "name": "Power off a virtual machine",
+            "description": {},
+            "url": {
+              "path": [
+                "subscriptions",
+                ":subscriptionId",
+                "resourceGroups",
+                ":resourceGroupName",
+                "providers",
+                "Microsoft.Compute",
+                "virtualMachines",
+                ":vmName",
+                "powerOff"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "2024-03-01",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "subscriptionId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceGroupName",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "vmName",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "https://management.azure.com/.default"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+                },
+                {
+                  "key": "authUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "authorization_code"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "f22ccd0a-7e8f-4bb8-82a4-1e0d7f4803a7",
+              "name": "Power off in progress",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "resourceGroups",
+                    ":resourceGroupName",
+                    "providers",
+                    "Microsoft.Compute",
+                    "virtualMachines",
+                    ":vmName",
+                    "powerOff"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2024-03-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceGroupName",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "vmName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Accepted",
+              "code": 202,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://management.azure.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "ec0affdd-de6f-4c39-9793-da844c7aeeba",
+    "name": "Azure Compute REST Availability Sets Virtual Machines API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Azure Resource Manager (ARM) REST API for managing Azure compute resources\n(virtual machines, virtual machine scale sets, disks, snapshots, images,\navailability sets). Requests are sent to `https://management.azure.com` and\nauthenticated with Microsoft Entra ID OAuth 2.0 bearer tokens.\n\n\nContact Support:\n Name: Azure Compute REST API",
+      "type": "text/plain"
+    }
+  }
+}

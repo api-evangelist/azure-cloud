@@ -1,0 +1,181 @@
+{
+  "item": [
+    {
+      "id": "c51189c4-becf-427e-bd9f-d1188894eb39",
+      "name": "Snapshots",
+      "description": {
+        "content": "Managed disk snapshots",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "01847017-3028-432f-9138-2d0b32aa5721",
+          "name": "List snapshots in a resource group",
+          "request": {
+            "name": "List snapshots in a resource group",
+            "description": {},
+            "url": {
+              "path": [
+                "subscriptions",
+                ":subscriptionId",
+                "resourceGroups",
+                ":resourceGroupName",
+                "providers",
+                "Microsoft.Compute",
+                "snapshots"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "2024-03-01",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "subscriptionId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "resourceGroupName",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "https://management.azure.com/.default"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+                },
+                {
+                  "key": "authUrl",
+                  "value": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "authorization_code"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "f2f0ace6-d317-4c11-9f56-846e259c1057",
+              "name": "Snapshots",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscriptions",
+                    ":subscriptionId",
+                    "resourceGroups",
+                    ":resourceGroupName",
+                    "providers",
+                    "Microsoft.Compute",
+                    "snapshots"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "2024-03-01"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "subscriptionId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "resourceGroupName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://management.azure.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "7cab62fe-434a-40c9-a7d9-de1dc0e787f3",
+    "name": "Azure Compute REST Availability Sets Snapshots API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Azure Resource Manager (ARM) REST API for managing Azure compute resources\n(virtual machines, virtual machine scale sets, disks, snapshots, images,\navailability sets). Requests are sent to `https://management.azure.com` and\nauthenticated with Microsoft Entra ID OAuth 2.0 bearer tokens.\n\n\nContact Support:\n Name: Azure Compute REST API",
+      "type": "text/plain"
+    }
+  }
+}
