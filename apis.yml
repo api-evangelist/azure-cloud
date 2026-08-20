@@ -21,6 +21,18 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/azure-cloud.png
 tags:
+  - Artificial Intelligence
+  - Cloud Computing
+  - Databases
+  - Infrastructure-as-a-Service
+  - Infrastructure
+  - Machine-Learning
+  - Microsoft
+  - Networking
+  - Platform-as-a-Service
+  - Software-as-a-Service
+  - Storage
+tags_raw:
   - AI
   - Cloud Computing
   - Databases
@@ -82,6 +94,13 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/azure/ai-services/
   baseURL: https://management.azure.com
   tags:
+  - Artificial Intelligence
+  - Computer-Vision
+  - Language
+  - Machine-Learning
+  - OpenAI
+  - Speech
+  tags_raw:
   - AI
   - Artificial Intelligence
   - Computer Vision
@@ -153,6 +172,13 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/rest/api/azure/
   baseURL: https://management.azure.com
   tags:
+  - Cost Management
+  - Governance
+  - Management
+  - Monitors
+  - Policy
+  - Resource Manager
+  tags_raw:
   - Cost Management
   - Governance
   - Management
