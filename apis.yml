@@ -300,6 +300,9 @@ apis:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/rest/api/storageservices/
 common:
+  - type: CapabilityMap
+    url: capabilities/azure-cloud-capability-edges.yml
+    name: Microsoft Azure Cloud Business Capability Map
   - type: AgenticAccess
     url: agentic-access/azure-cloud-agentic-access.yml
   - type: DomainSecurity

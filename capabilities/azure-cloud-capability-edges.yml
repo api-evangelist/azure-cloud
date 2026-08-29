@@ -1,0 +1,60 @@
+slug: azure-cloud
+provider: Microsoft Azure Cloud
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Telecommunications
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 5
+edges:
+- tag: Virtual Machines
+  spec_file: azure-cloud-virtual-machines-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.88
+  evidence: createOrUpdateVirtualMachine  Create or update a virtual machine; startVirtualMachine; powerOffVirtualMachine
+  reason: Full lifecycle and power control of cloud compute instances — unambiguously compute infrastructure
+    management (BC-600.50).
+- tag: Availability Sets
+  spec_file: azure-cloud-availability-sets-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: List availability sets in a resource group ... managing Azure compute resources (virtual machines,
+    virtual machine scale sets, disks...)
+  reason: Managing cloud compute resource groupings is IT infrastructure management (compute/cloud infrastructure).
+- tag: Disks
+  spec_file: azure-cloud-disks-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: GET .../Microsoft.Compute/disks  listDisks  List managed disks in a resource group
+  reason: Cloud managed-disk (storage) resource management via Azure Resource Manager — compute/storage
+    infrastructure administration, i.e. IT Infrastructure Management, not any industry-specific capability.
+- tag: Virtual Machine Scale Sets
+  spec_file: azure-cloud-virtual-machine-scale-sets-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: listVmScaleSets  List VM scale sets in a resource group
+  reason: Management of elastic compute resource groupings in Azure — cloud compute infrastructure, mapped
+    to IT Infrastructure Management.
+- tag: Snapshots
+  spec_file: azure-cloud-snapshots-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.7
+  evidence: listSnapshots  List snapshots in a resource group
+  reason: Listing disk snapshots is cloud storage resource administration. Could touch backup/DR, but
+    the single list operation only evidences infrastructure resource management.
