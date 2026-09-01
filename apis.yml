@@ -36,12 +36,11 @@ tags:
   - Artificial Intelligence
   - Cloud Computing
   - Databases
-  - IaaS
+  - Infrastructure-as-a-Service
   - Infrastructure
   - Machine-Learning
   - Microsoft
   - Networking
-  - PaaS
   - Platform-as-a-Service
   - Software-as-a-Service
   - Storage
@@ -72,6 +71,12 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/rest/api/virtualnetwork/
   baseURL: https://management.azure.com
   tags:
+  - ExpressRoute
+  - Firewall
+  - Load Balancer
+  - Networking
+  - VPN
+  tags_raw:
   - ExpressRoute
   - Firewall
   - Load Balancer
